@@ -27,37 +27,21 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        //'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            //'class' => 'navbar-inverse navbar-fixed-top',
-            //'class' => 'bg-dark',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right bg-dark'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
+
+    <nav id="w0" class="navbar-fixed-top navbar"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button></div><div id="w0-collapse" class="collapse navbar-collapse"><ul id="w1" class="navbar-nav bg-dark nav"><li id="down_menu" class="dropdown active"><a class="dropdown-toggle" href="/web/index.php?r=site%2Findex" data-toggle="dropdown">Красноярский край <span class="caret"></span></a><ul id="w2" class="dropdown-menu"><li><a href="/web/index.php?r=site%2Fabout" tabindex="-1">Кемеровская область</a></li>
+<li><a href="/web/index.php?r=site%2Fcontact" tabindex="-1">Омская область</a></li>
+<li><a href="/web/index.php?r=site%2Fcontact" tabindex="-1">Новосибирская область</a></li>
+<li><a href="/web/index.php?r=site%2Fcontact" tabindex="-1">Тюменская область</a></li>
+<li><a href="/web/index.php?r=site%2Fcontact" tabindex="-1">Алтайская область</a></li></ul></li>
+<li><a href="/web/index.php?r=site%2Fabout">Доставка и оплата</a></li>
+<li><a href="/web/index.php?r=site%2Fabout">Техцентр</a></li>
+<li><a href="/web/index.php?r=site%2Fabout">О компании</a></li>
+<li><a href="/web/index.php?r=site%2Fcontact">Контакт</a></li></ul><ul id="w3" class="navbar-nav navbar-right bg-dark nav"><li><a href="/web/index.php?r=site%2Fcontact">Регистрация</a></li>
+<li><a href="/web/index.php?r=site%2Flogin">Вход</a></li></ul></div></div></nav>
+
 
     <div class="container">
         <?= Breadcrumbs::widget([
